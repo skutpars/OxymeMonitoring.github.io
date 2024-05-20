@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxym - Monitoring System</title>
+    <link rel="stylesheet" href="psb.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>OXYME MONITORING SYSTEM</h1>
+    </header>
+    <main class="container">
+        <section class="sensor-data">
+            <h2>Sensor Data</h2>
+            <ul>
+                <li>Respiration Rate: <div class="sensor-value" id="respiration-rate">--</div>
+                </li>
+                <li>SPO2: <div class="sensor-value" id="spo2">--</div>
+                </li>
+                <li>Air Flow: <div class="sensor-value" id="air-flow">--</div>
+                </li>
+                <li>Air Pressure: <div class="sensor-value" id="air-pressure">--</div>
+                </li>
+                <li>Temperature: <div class="sensor-value" id="temperature">--</div>
+                </li>
+            </ul>
+        </section>
+        <section class="graph">
+            <h2>Flow Rate and Pressure Rate</h2>
+            <div class="chart-container">
+                <canvas id="flow-rate-chart"></canvas> <!-- Ubah div menjadi canvas -->
+                <canvas id="pressure-rate-chart"></canvas> <!-- Ubah div menjadi canvas -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; OXYME</p>
+    </footer>
+    <script src="psb.js"></script>
+</body>
+
+</html>

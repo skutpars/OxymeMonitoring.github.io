@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0c54a0;
+    color: #ffffff;
+    padding: 30px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sensor-data, .graph {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sensor-data h2, .graph h2 {
+    color: #0c54a0;
+    font-size: 18px;
+}
+
+.sensor-data ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sensor-data li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sensor-value {
+    display: inline-block;
+    padding: 3px;
+    border: 1px solid #0c54a0;
+    border-radius: 4px;
+    background-color: #ffffff;
+    margin-top: 3px;
+    font-size: 12px;
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+canvas {
+    width: 100%;
+    height: 200px; /* Mengatur tinggi elemen canvas */
+}
+
+footer {
+    background-color: #0c54a0;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+
+    .sensor-data {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    .graph {
+        flex: 2;
+    }
+
+    .chart-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .sensor-data li {
+        font-size: 12px;
+    }
+
+    canvas {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    .sensor-data, .graph {
+        padding: 5px;
+    }
+
+    .sensor-data li {
+        font-size: 10px;
+    }
+
+    canvas {
+        height: 100px;
+    }
+}
